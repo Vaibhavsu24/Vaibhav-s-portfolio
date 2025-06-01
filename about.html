@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Vaibhav S</title>
+  <link rel="stylesheet" href="vaibhav-portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-mode">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">VS</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="about-hero">
+      <div class="section-content">
+        <h1>About Me</h1>
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="bio-card">
+              <h2>My Journey</h2>
+              <p>I'm a young and energetic professional with strong analytical and problem-solving skills. With a solid foundation in electronics and a growing passion for computer science, I bring over 2+ years of industry-grade experience in quality engineering and embedded systems.</p>
+              <p>Currently pursuing BTech in Computer Science Engineering, I'm passionate about bridging electronics and software to develop innovative solutions that improve everyday life.</p>
+            </div>
+            
+            <div class="experience-card">
+              <h2>Professional Experience</h2>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-icon">
+                    <i class="fas fa-industry"></i>
+                  </div>
+                  <div class="timeline-content">
+                    <h3>Technician & IQC Team Lead</h3>
+                    <h4>Foxconn India</h4>
+                    <h4>2023-2025</h4>
+                    <p>Developed and programmed OMM for precise inspection, led IQC team, and conducted FMEA analysis.</p>
+                  </div>
+                  
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-icon">
+                    <i class="fas fa-microchip"></i>
+                  </div>
+                  
+                  <div class="timeline-content">
+                    <h3>Quality Engineer</h3>
+                    <h4>Bosch India</h4>
+                    <h4>2022-2023</h4>
+
+                    <p>Led product validation and inspection for new product launches, implemented quality control techniques, and managed process validation.</p>
+                  </div>
+                  <div class="timeline-content">
+                    <h3>Electronics System Designer</h3>
+                    <h4>Zilliot Technologies Mangaluru</h4>
+                    <h4>2022-2023</h4>
+                    <p>Internship as Embeded System Designer where i worked on projects on Sub-Gighz, BLE low energy,Circuit Designing and Analysis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-section">
+            <div class="skills-card">
+              <h2>Technical Expertise</h2>
+              <div class="skill-categories">
+                <div class="skill-category">
+                  <h3>Programming</h3>
+                  <div class="skill-tags">
+                    <span>C++</span>
+                    <span>C</span>
+                    <span>Python</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3>Hardware</h3>
+                  <div class="skill-tags">
+                    <span>Embedded Systems</span>
+                    <span>Arduino</span>
+                    <span>ESP32</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3>AI & IoT</h3>
+                  <div class="skill-tags">
+                    <span>AI/ML</span>
+                    <span>OpenCV</span>
+                    <span>IoT</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3>Communication</h3>
+                  <div class="skill-tags">
+                    <span>Bluetooth</span>
+                    <span>GSM/GPS</span>
+                    <span>WiFi</span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3>Quality & Analysis</h3>
+                  <div class="skill-tags">
+                    <span>FMEA</span>
+                    <span>A3 Problem Solving</span>
+                    <span>Root Cause Analysis</span>
+                    <span>5 Why Analysis</span>
+                    <span>4M & Ishikawa</span>
+                    <span>Circuit Analysis</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-card">
+              <div class="stat-item">
+                <i class="fas fa-industry"></i>
+                <h3>2+</h3>
+                <p>Years Industry Experience</p>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-project-diagram"></i>
+                <h3>3+</h3>
+                <p>Major Projects</p>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-certificate"></i>
+                <h3>2</h3>
+                <p>Professional Roles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+      
+      if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html> 

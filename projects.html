@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Vaibhav S</title>
+  <link rel="stylesheet" href="vaibhav-portfolio.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .uncropped-img {
+      width: 100%;
+      height: 300px; /* or whatever you want */
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body class="light-mode">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">VS</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="projects-hero">
+      <div class="section-content">
+        <hr><br><br><br><br><br>
+        <h1>My Projects</h1>
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://media.licdn.com/dms/image/v2/D562DAQElhGrjwpSo2Q/profile-treasury-image-shrink_1920_1920/B56ZaOzuvZGkAc-/0/1746152649090?e=1749319200&v=beta&t=6zo3XxjbZGyz41oa6HiBV_yS2K3xc5xG9hSyy3btohA" alt="Paral AI HUB">
+            </div>
+            <div class="project-info">
+              <h3>Paral AI HUB</h3>
+              <p>An advanced AI-powered platform for automated quality control and inspection in manufacturing processes.</p>
+              <div class="project-tags">
+                <span>AI/ML</span>
+                <span>Computer Vision</span>
+                <span>OpenCV</span>
+                <span>Python</span>
+              </div>
+              <a href="https://paralai.netlify.app/" class="">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="uncropped-img">
+              <img src="logo.png" alt="Project Veyron">
+            </div>
+            </div>
+           
+            <div class="project-info">
+              <h3>Project Veyron</h3>
+              <p>A high-performance embedded system project focusing on real-time data processing and IoT integration.</p>
+              <div class="project-tags">
+                <span>Embedded Systems</span>
+                <span>IoT</span>
+                <span>C++</span>
+                <span>ESP32</span>
+              </div>
+              <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://www.shutterstock.com/image-vector/anti-theft-vector-icon-illustration-600nw-2302535187.jpg" alt="Biometric Vehicle Security">
+            </div>
+            <div class="project-info">
+              <h3>Biometric Vehicle Security System</h3>
+              <p>An innovative security solution using biometric authentication for vehicle access control and anti-theft protection.</p>
+              <div class="project-tags">
+                <span>Arduino</span>
+                <span>Biometrics</span>
+                <span>Security</span>
+                <span>IoT</span>
+              </div>
+              <a href="https://github.com/Vaibhavsu24/Colossus2.0_Team_Elevate.git" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.remove('light-mode');
+      body.classList.add('dark-mode');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+      
+      if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html> 
